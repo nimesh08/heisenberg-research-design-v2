@@ -140,31 +140,48 @@ export const siteContent = {
     eyebrow: "Built by a team from",
     institutions: [
       {
+        id: "cambridge",
         name: "University of Cambridge",
-        logo: "/assets/team/team-cambridge-color.svg"
+        logo: "/assets/team/team-cambridge-color.svg",
+        tone: "dark"
       },
-      { name: "PsiQuantum", logo: "/assets/team/team-psiquantum.png" },
       {
+        id: "psiquantum",
+        name: "PsiQuantum",
+        logo: "/assets/team/team-psiquantum.png",
+        tone: "dark"
+      },
+      {
+        id: "iit-madras",
         name: "Indian Institute of Technology Madras",
-        logo: "/assets/team/team-iit-madras.png"
+        logo: "/assets/team/team-iit-madras.png",
+        tone: "dark"
       },
       {
+        id: "max-planck",
         name: "Max Planck Society",
         logo: "/assets/team/team-max-planck.svg"
       },
       {
+        id: "berkeley-lab",
         name: "Lawrence Berkeley National Laboratory",
         logo: "/assets/team/team-berkeley-lab.svg"
       },
       {
+        id: "nit-warangal",
         name: "National Institute of Technology Warangal",
         logo: "/assets/team/team-nit-warangal.png"
       },
       {
+        id: "columbia",
         name: "Columbia University",
         logo: "/assets/team/team-columbia.svg"
       },
-      { name: "Google", logo: "/assets/team/team-google.png" }
+      {
+        id: "google",
+        name: "Google",
+        logo: "/assets/team/team-google.png"
+      }
     ]
   },
   footer: {

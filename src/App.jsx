@@ -25,6 +25,19 @@ function Header() {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const closeOutside = (event) => {
+      if (event.target instanceof Element && !event.target.closest(".site-header")) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
+  }, [menuOpen]);
+
   return (
     <header className="site-header">
       <div className="site-header__inner shell">
@@ -50,6 +63,13 @@ function Header() {
               {item.label}
             </a>
           ))}
+          <a
+            className="primary-nav__mobile-cta"
+            href={content.links.careers}
+            onClick={() => setMenuOpen(false)}
+          >
+            Join the team
+          </a>
         </nav>
         <a className="button button--nav" href={content.links.careers}>
           Join the team
@@ -186,7 +206,7 @@ function WorkCard({ card }) {
       <div className={`work-card__visual work-card__visual--${card.tone}`}>
         <img src={mark} alt="" />
       </div>
-      <p className="work-card__label">{card.title}</p>
+      <h3 className="work-card__label">{card.title}</h3>
       <p className="work-card__body">{card.body}</p>
       {card.cta ? (
         <a className="text-link" href={content.links[card.hrefKey]}>
@@ -224,7 +244,12 @@ function Team() {
         </h2>
         <div className="team-grid">
           {content.team.institutions.map((institution) => (
-            <div className="team-logo" key={institution.name}>
+            <div
+              className={`team-logo team-logo--${institution.id}${
+                institution.tone === "dark" ? " team-logo--dark" : ""
+              }`}
+              key={institution.name}
+            >
               <img src={institution.logo} alt={institution.name} />
             </div>
           ))}

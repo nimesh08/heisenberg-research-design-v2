@@ -625,9 +625,9 @@ a {
   object-fit: contain;
 }
 
-.team-logo--dark {
-  background: var(--espresso);
-  border-color: var(--espresso);
+.team-logo--adaptive img {
+  filter: brightness(0) saturate(100%);
+  opacity: 0.84;
 }
 
 .team-logo--psiquantum img,
@@ -637,6 +637,32 @@ a {
 
 .team-logo--google img {
   max-height: 48px;
+}
+
+@media (hover: hover) {
+  .team-logo--adaptive {
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .team-logo--adaptive img {
+    transition:
+      filter 180ms ease,
+      opacity 180ms ease,
+      transform 180ms ease;
+  }
+
+  .team-logo--adaptive:hover {
+    background: var(--espresso);
+    border-color: var(--espresso);
+  }
+
+  .team-logo--adaptive:hover img {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.025);
+  }
 }
 
 .site-footer {

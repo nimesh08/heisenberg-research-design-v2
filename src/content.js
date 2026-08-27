@@ -143,19 +143,19 @@ export const siteContent = {
         id: "cambridge",
         name: "University of Cambridge",
         logo: "/assets/team/team-cambridge-color.svg",
-        tone: "dark"
+        tone: "adaptive"
       },
       {
         id: "psiquantum",
         name: "PsiQuantum",
         logo: "/assets/team/team-psiquantum.png",
-        tone: "dark"
+        tone: "adaptive"
       },
       {
         id: "iit-madras",
         name: "Indian Institute of Technology Madras",
         logo: "/assets/team/team-iit-madras.png",
-        tone: "dark"
+        tone: "adaptive"
       },
       {
         id: "max-planck",

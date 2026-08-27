@@ -246,7 +246,7 @@ function Team() {
           {content.team.institutions.map((institution) => (
             <div
               className={`team-logo team-logo--${institution.id}${
-                institution.tone === "dark" ? " team-logo--dark" : ""
+                institution.tone ? ` team-logo--${institution.tone}` : ""
               }`}
               key={institution.name}
             >

@@ -4,7 +4,11 @@ export const siteContent = {
     marks: {
       cream: "/assets/brand/mark-cream.png",
       espresso: "/assets/brand/mark-espresso.png",
-      orange: "/assets/brand/mark-orange.png"
+      orange: "/assets/brand/mark-orange.png",
+      header: "/assets/brand/mark-illustrated-espresso.png",
+      hero: "/assets/brand/mark-illustrated-orange.png",
+      footer: "/assets/brand/mark-illustrated-orange.png",
+      work: "/assets/brand/work-mark.png"
     }
   },
   navigation: [
@@ -26,7 +30,7 @@ export const siteContent = {
     eyebrow: "The frontier lab",
     title: "Scaling quantum computing.",
     description:
-      "Quantum has been 5 years away for the past 20 years. We aim to solve humanity’s hardest challenges by unlocking useful quantum computing.",
+      "Quantum has been 5 years away for the past 20 years. We aim to help tackle consequential challenges of our time by unlocking useful quantum computing.",
     primaryCta: "Explore the research",
     secondaryCta: "Work with us",
     investorLabel: "Backed by",
@@ -43,7 +47,7 @@ export const siteContent = {
   },
   thesis: {
     problem: {
-      eyebrow: "The problem",
+      eyebrow: "The problem with today’s hardware",
       title:
         "Most quantum systems are built around a single qubit technology.",
       body:
@@ -65,20 +69,23 @@ export const siteContent = {
       {
         title: "Architecture",
         body:
-          "Designed to work across multiple quantum modalities and AI accelerators, matching each part of a workload to the system best suited to it.",
-        tone: "orange"
+          "We are designing an architecture that works across multiple quantum modalities, matching each part of a workload to the qubit system best suited to it. We’re building an adaptive hybrid quantum-classical stack to accelerate AI and other computationally demanding workloads.",
+        icon: "/assets/research/research-architecture.png",
+        iconStyle: "logo"
       },
       {
         title: "Interconnect",
         body:
           "We are developing hardware interconnects designed to link different quantum processors so they can communicate and operate as one system.",
-        tone: "espresso"
+        icon: "/assets/research/research-interconnect.png",
+        iconStyle: "logo-dark"
       },
       {
-        title: "Mosaic",
+        title: "Quilt Compiler",
         body:
-          "Our software stack for partitioning workloads and coordinating execution across different quantum processors.",
-        tone: "orange"
+          "Quilt is our software stack for partitioning workloads and coordinating execution across different quantum processors.",
+        icon: "/assets/research/research-quilt-compiler.png",
+        iconStyle: "logo"
       }
     ]
   },
@@ -86,13 +93,13 @@ export const siteContent = {
     eyebrow: "Applications",
     title: "What could quantum computing unlock?",
     intro:
-      "Useful quantum computing could help researchers model molecules and materials that are extremely difficult for today’s computers to simulate.",
+      "Useful quantum computing could help researchers understand and predict the behaviour of molecules and materials that are extremely difficult for today’s computers to simulate.",
     items: [
       {
         number: "01",
         title: "New medicines",
         description:
-          "Accelerate the search for new medicines by modelling molecules that are extremely difficult for today’s computers to simulate."
+          "Accelerate the search for new medicines by simulating the interactions between new molecules."
       },
       {
         number: "02",
@@ -125,7 +132,7 @@ export const siteContent = {
         body:
           "We are onboarding early quantum hardware companies and enterprises with high-compute workloads to our heterogeneous architecture. If our work resonates with your technical needs, please reach out.",
         cta: "Partner with us",
-        hrefKey: "partnerships",
+        action: "partner",
         tone: "espresso"
       },
       {
@@ -184,10 +191,92 @@ export const siteContent = {
       }
     ]
   },
+  partnerForm: {
+    eyebrow: "Partnerships",
+    title: "Partner with Heisenberg Research",
+    intro: "Tell us what becomes possible if we build it together.",
+    fields: [
+      {
+        name: "full_name",
+        label: "Name",
+        type: "text",
+        placeholder: "Jane Doe",
+        autoComplete: "name",
+        minLength: 2,
+        maxLength: 120,
+        error: "Enter your name."
+      },
+      {
+        name: "role_title",
+        label: "Role / title",
+        type: "text",
+        placeholder: "Machine Learning Researcher",
+        autoComplete: "organization-title",
+        minLength: 2,
+        maxLength: 120,
+        error: "Enter your role or title."
+      },
+      {
+        name: "company_name",
+        label: "Company",
+        type: "text",
+        placeholder: "Stark Industries",
+        autoComplete: "organization",
+        minLength: 2,
+        maxLength: 160,
+        error: "Enter your company name."
+      },
+      {
+        name: "company_website",
+        label: "Company website",
+        type: "url",
+        placeholder: "https://starkindustries.com",
+        autoComplete: "url",
+        maxLength: 2048,
+        error: "Enter a valid URL, including https://."
+      },
+      {
+        name: "company_building",
+        label: "What is your company building?",
+        type: "textarea",
+        placeholder: "We're working to make ... possible.",
+        minLength: 20,
+        maxLength: 3000,
+        error: "Tell us what your company is building."
+      },
+      {
+        name: "future_need",
+        label: "What does the future need that we could build together?",
+        type: "textarea",
+        placeholder:
+          "What are you trying to make real with us — and what's held it back so far?",
+        minLength: 20,
+        maxLength: 3000,
+        error: "Tell us what we could build together."
+      },
+      {
+        name: "work_email",
+        label: "Work email",
+        type: "email",
+        placeholder: "jane@company.com",
+        autoComplete: "email",
+        maxLength: 254,
+        error: "Enter a valid work email."
+      }
+    ],
+    submitLabel: "Send partnership inquiry",
+    submittingLabel: "Sending…",
+    successTitle: "Thank you.",
+    successBody: "Your partnership inquiry has been received. We’ll be in touch.",
+    configurationError:
+      "The partnership form is not connected yet. Please try again later.",
+    errorMessage: "We couldn’t save your inquiry. Please try again.",
+    disclosure:
+      "By submitting, you agree that Heisenberg Research may use this information to respond to your inquiry."
+  },
   footer: {
     copyright: "© 2026 Heisenberg Research. All rights reserved.",
     rightsNotice:
-      "If you are a rights holder and would like a video removed, please email us.",
-    rightsLabel: "Email us"
+      "Logos & brand marks © 2026 Camille Stavrakas. All rights reserved."
   }
 };

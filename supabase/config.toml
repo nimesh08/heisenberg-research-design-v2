@@ -1,0 +1,4 @@
+project_id = "heisenberg-research-design-v2"
+
+[functions.submit-partnership]
+verify_jwt = false

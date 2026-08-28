@@ -262,7 +262,7 @@ function Team() {
           <div className="marquee__track">
             {institutions.map((institution) => (
               <div
-                className="marquee__item"
+                className={`marquee__item marquee__item--${institution.id}`}
                 key={`${institution.name}-${institution.duplicate ? "duplicate" : "primary"}`}
                 aria-hidden={institution.duplicate ? "true" : undefined}
               >

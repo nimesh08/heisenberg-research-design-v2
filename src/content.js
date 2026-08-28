@@ -2,13 +2,13 @@ export const siteContent = {
   brand: {
     name: "Heisenberg Research",
     marks: {
-      cream: "/assets/brand/mark-cream.png",
-      espresso: "/assets/brand/mark-espresso.png",
-      orange: "/assets/brand/mark-orange.png",
-      header: "/assets/brand/mark-illustrated-espresso.png",
-      hero: "/assets/brand/mark-illustrated-orange.png",
-      footer: "/assets/brand/mark-illustrated-orange.png",
-      work: "/assets/brand/work-mark.png"
+      cream: "/assets/brand/logo-cream-on-espresso.png",
+      espresso: "/assets/brand/logo-espresso-on-cream.png",
+      orange: "/assets/brand/logo-orange-on-cream.png",
+      header: "/assets/brand/logo-orange-on-cream.png",
+      hero: "/assets/brand/logo-orange-on-cream.png",
+      footer: "/assets/brand/logo-cream-on-espresso.png",
+      work: "/assets/brand/logo-orange-on-cream.png"
     }
   },
   navigation: [
